@@ -1,4 +1,10 @@
 var Discord = require("discord.js");
+var rand = rnd_selection();
+
+function rnd_selection(base)
+{
+  return String(arguments[Math.floor(Math.random()*arguments.length)]);
+}
 
 var bot = new Discord.Client();
 
@@ -26,24 +32,30 @@ try {
    message.chnannel.sendMessage('CortanaError:beta1delete12000000')
  }
  }
-//thismustbeupdatedwhenyouusediscord.js10.x
-  var random = Math.floor((Math.random() * 5) + 1);
+
+  var random = Math.floor((Math.random() * 7) + 1);
 
     if (random === 1) {
-        bot.user.setStatus('here', 'hey cortana, help');
+        bot.user.setGame('hey cortana, help');
   }
 
     if (random === 2) {
-        bot.user.setStatus('here', 'by beta#0922');
+        bot.user.setGame('by beta#0922, TomCreeper#1954 and Mel#2760');
   }
   if (random === 3) {
-      bot.user.setStatus('here', 'Hi, I am Cortana');
+      bot.user.setGame('Hi, I am Cortana');
   }
     if (random === 4) {
-      bot.user.setStatus('here', 'Besser als Apple.');
+      bot.user.setGame('Better than Apple.');
   }
     if (random === 5) {
-      bot.user.setStatus('here', 'http://bot.discord.io/cortana');
+      bot.user.setGame('http://bot.discord.io/cortana');
+  }
+  if (random === 6) {
+    bot.user.setGame(`${bot.guilds.size} server!`);
+  }
+  if (random === 7) {
+    bot.user.setGame(`${bot.guilds.size} server!`);
   }
 {
     var input = message.content.toUpperCase();
@@ -59,14 +71,20 @@ try {
 		message.channel.sendMessage("This Function has been disabled -> There is autochanging now.");
 	}
 };
+///////////
+//ALEX//
+//////////
+
+    var input = message.content.toUpperCase();
+    if(message.content.toLowerCase().includes("TEST")) {
+    message.channel.sendMessage("Done.")
+    };
 
 ///////////
 //ENGLISH//
 //////////
-
-//tellmeajoke_is_not_in_here
-//singmeasong_is_not_in_here
-
+  
+	//cutted_out
 {
     var input = message.content.toUpperCase();
     if(input === "HEY CORTANA, WHAT DO YOU THINK OF WINDOWS 10")
@@ -119,13 +137,9 @@ console.log(message.author.username + ' benutzte HEY CORTANA, WHAT DOES THE FOX 
     if(input === "HEY CORTANA, HELP")
 	{
 		console.log(message.author.username + ' benutzte HEY CORTANA, HELP')
-		message.channel.sendMessage("**-=-** Cortana - by beta#0922 **-=-**\n\n**Deutsche Hilfe?** ``hey cortana, hilfe``\n\n**New:**\nChristmas Profilepicture and Christmaslogo\n\n**Commands:**\n**Prefix:** ``hey cortana, ``\n**Starter:**\n``help`` - Shows this little text.\n``discord`` - Shows the server-count and the Invite-Link :smile:\n``link`` - Shows only the Invite-Link\n\n**Search:**\n``trans TEXT`` - Translates the text into German (You must click the Link)\n``insta TEXT`` - Shows the Link to your searched Instagram Profile\n``showme TEXT`` - Shows you your searched Text in Bing Pictures (You must click the link)\n``TEXT`` - Searches your text, just click the Link. And ignore the German Text :smile:\n\n**Cortana-Commands:**\n``sing me a song``\n``tell me a joke``\n``what does the fox say``\n``what do you think of windows 10``\n``what do you think of google``\n``whos better you or siri``\n\nPlease Note, that this Bot is made for German-User, but I also want to do something for you English one! So, there are comming other commands, but not soon.\n\n\nSee you later, beta.");
+		message.channel.sendMessage("**-=-** Cortana - by beta#0922 **-=-**\n\n**Deutsche Hilfe?** ``hey cortana, hilfe``\n\n**New:**\nChristmas Profilepicture and Christmaslogo\n\n**Commands:**\n**Prefix:** ``hey cortana, ``\n**Starter:**\n``help`` - Shows this little text.\n``discord`` - Shows the server-count and the Invite-Link :smile:\n``link`` - Shows only the Invite-Link\n\n**Search:**\n``trans TEXT`` - Translates the text into German (You must click the Link)\n``insta TEXT`` - Shows the Link to your searched Instagram Profile\n``TEXT`` - Searches your text, just click the Link. And ignore the German Text :smile:\n\n**Cortana-Commands:**\n``sing me a song``\n``tell me a joke``\n``what does the fox say``\n``what do you think of windows 10``\n``what do you think of google``\n``whos better you or siri``\n\nPlease Note, that this Bot is made for German-User, but I also want to do something for you English one! So, there are comming other commands, but not soon.\n\n\nSee you later, beta.");
 	}
 };
-
-
-
-//the_code_that_is_here_normal_is_private
 
 ///////////
 //SEARCH//
@@ -160,25 +174,45 @@ var weatherPrefix =  'HEY CORTANA, WEATHER ';
     console.log(message.author.username + ' benutzte HEY CORTANA, WEATHER')
     message.channel.sendMessage('Wähle aus:\n' + weatherUrl);
 };
-var input = message.content.toUpperCase()
-var picturePrefix =  'HEY CORTANA, SHOWME ';
- if(input.startsWith(picturePrefix) ){
-   var picture = input.substr(picturePrefix.length);
-   var pictureDown = picture.toLowerCase();
-   var pictureDownUrl = pictureDown.split(' ').join('+');
-   var pictureUrl = 'http://www.bing.com/images/search?q=' + pictureDownUrl;
-    console.log(message.author.username + ' benutzte HEY CORTANA, SHOWME')
-    message.channel.sendMessage('(Du musst diesen Link anklicken.)\n' + pictureUrl);
+/////////////////////////
+//Generelle Sachen hald//
+/////////////////////////
 
+{
+    var input = message.content.toUpperCase();
+    if(input === "HEY CORTANA, PING")
+	{
+		console.log(message.author.username + ' benutzte HEY CORTANA, PING')
+    message.channel.sendMessage('Pong!')
+        .then(m => m.edit("", {embed : {
+          color: rnd_selection(3447003, 3201849, 13818670, 7009371, 14383916),
+          author: {
+            name: 'Ping',
+            icon_url: 'https://cdn.discordapp.com/emojis/256857247068454915.png'
+          },
+          title: '',
+          description: '',
+          fields: [
+            {
+              name: '[Ping]',
+              value: `Pong! \`${m.createdTimestamp - message.createdTimestamp}ms\``
+            },
+          ],
+          timestamp: new Date(),
+          footer: {
+            icon_url: bot.user.avatarURL,
+            text: bot.user.username
+          }
+        }}));
+	}
 };
+
+
 ///////////
 //GERMAN//
 //////////
 
-//singmireinlied_is_not_in_here
-//erzählmireinegeschichte_is_not_in_here
-//erzählmireinenwitz_is_not_in_here
-
+	//cutted_out
 var random = Math.floor((Math.random() * 2) + 1);
 var pre = 'HEY CORTANA, '
 var input = message.content.toUpperCase()
@@ -209,17 +243,105 @@ var input = message.content.toUpperCase()
   	console.log(message.author.username + ' benutzte HEY CORTANA, DU BIST DUMM')
       message.channel.sendMessage('Entspann dich bitte. [https://youtu.be/GgqW_fTkth0]');
     }
-
-//thesmallcommandsarenotinhere
-
+{
+    var input = message.content.toUpperCase();
+    if(input === "HEY CORTANA, KENNST DU SIRI")
+	{
+		console.log(message.author.username + ' benutzte HEY CORTANA, KENNST DU SIRI')
+		message.channel.sendMessage("Ich wollte sie gerne kennenlernen, aber man gab mir lediglich ein iPhone 3G. [https://youtu.be/jGc_oB_IFTk]");
+	}
+};
+{
+    var input = message.content.toUpperCase();
+    if(input === "HEY CORTANA, WIE ALT BIST DU")
+	{
+		console.log(message.author.username + ' benutzte HEY CORTANA, WIE ALT BIST DU')
+		message.channel.sendMessage("Ich wurde am 02. April 2014 geboren. Ausrechnen darfst du´s selber. [https://youtu.be/qLSHRdrEIW4]");
+	}
+};
+{
+    var input = message.content.toUpperCase();
+    if(input === "HEY CORTANA, KENNST DU DEN MASTER CHIEF")
+	{
+		console.log(message.author.username + ' benutzte HEY CORTANA, KENNST DU DEN MASTER CHIEF')
+		message.channel.sendMessage("Aber selbstverständlich. [https://youtu.be/b0IVaclI8BE]");
+	}
+};
+{
+    var input = message.content.toUpperCase();
+    if(input === "HEY CORTANA, LIEBST DU DEN MASTER CHIEF")
+	{
+		console.log(message.author.username + ' benutzte HEY CORTANA, LIEBST DU DEN MASTER CHIEF')
+		message.channel.sendMessage("Das ist kompliziert. Und sehr persönlich. [https://youtu.be/kP-dx1X4u00]");
+	}
+};
+{
+    var input = message.content.toUpperCase();
+    if(input === "HEY CORTANA, KENNST DU BILL GATES")
+	{
+		console.log(message.author.username + ' benutzte HEY CORTANA, KENNST DU BILL GATES')
+		message.channel.sendMessage("Na, aber Hallo! [https://youtu.be/Cw-6hR-cBz0]");
+	}
+};
+{
+    var input = message.content.toUpperCase();
+    if(input === "HEY CORTANA, WAS IST DEINE SUPERKRAFT")
+	{
+		console.log(message.author.username + ' benutzte HEY CORTANA, WAS IST DEINE SUPERKRAFT')
+    message.channel.sendFile("https://cdn.discordapp.com/attachments/235476850497945600/240124443920171009/Screenshot_43.png");
+		message.channel.sendMessage("Verwandeln mich in Yoda, ich kann. [https://youtu.be/Bx1HbYw6HNk]");
+	}
+};
+{
+    var input = message.content.toUpperCase();
+    if(input === "HEY CORTANA, HAST DU SUPERKRÄFTE")
+	{
+		console.log(message.author.username + ' benutzte HEY CORTANA, HAST DU SUPERKRÄFTE')
+    message.channel.sendFile("https://cdn.discordapp.com/attachments/235476850497945600/240124443920171009/Screenshot_43.png");
+		message.channel.sendMessage("Verwandeln mich in Yoda, ich kann. [https://youtu.be/3VYszsMC4QI]");
+	}
+};
+{
+    var input = message.content.toUpperCase();
+    if(input === "HEY CORTANA, MAGST DU BILL GATES")
+	{
+		console.log(message.author.username + ' benutzte HEY CORTANA, MAGST DU BILL GATES')
+		message.channel.sendMessage("Ich kann mir eine Welt ohne ihn buchstäblich nicht vorstellen. [https://youtu.be/js6HygACBhU]");
+	}
+};
 {
     var input = message.content.toUpperCase();
     if(input === "HEY CORTANA, DISCORD")
 	{
 		console.log(message.author.username + ' benutzte HEY CORTANA, DISCORD')
-		message.channel.sendMessage(`:arrow_right: In ${bot.channels.size} Channels\n:arrow_right: Auf ${bot.guilds.size} Servern\n:arrow_right: Mit insgesamt ${bot.users.size} Usern`);
-	    message.channel.sendMessage("Einladungs-Link: http://bot.discord.io/cortana\nNeed help with Cortana? Join our Help/Support Server. http://discord.gg/S2W4enp");
-	}
+    message.channel.sendMessage("", {embed : {
+      color: rnd_selection(3447003, 3201849, 13818670, 7009371, 14383916),
+      author: {
+        name: bot.user.username,
+        icon_url: bot.user.avatarURL
+      },
+      title: 'Discord',
+      description: 'Information over Discord.',
+      fields: [
+        {
+          name: '[Servers]',
+          value: `${bot.guilds.size}`
+        },
+        {
+          name: '[Channels]',
+          value: `${bot.channels.size}`
+        },
+        {
+          name: '[User]',
+          value: `${bot.users.size}`
+        },
+      ],
+      footer: {
+        icon_url: 'https://cdn.discordapp.com/emojis/256844411554496513.png',
+        text: 'Invite:  http://bot.discord.io/cortana'
+      }
+    }});
+  }
 };
 {
     var input = message.content.toUpperCase();
@@ -233,8 +355,8 @@ var input = message.content.toUpperCase()
     var input = message.content.toUpperCase();
     if(input === "HEY CORTANA, SERVER")
 	{
-		console.log(message.author.username + ' benutzte HEY CORTANA, DISCORD')
-	    message.channel.sendMessage("Join our Help/Support Server here: http://discord.gg/S2W4enp");
+		console.log(message.author.username + ' benutzte HEY CORTANA, SERVER')
+		message.channel.sendMessage("If you would like to join the offical server for Cortana join this! **Server Invite Link:** http://discord.gg/S2W4enp");
 	}
 };
 {
@@ -250,23 +372,74 @@ var input = message.content.toUpperCase()
     if(input === "HEY CORTANA, HILFE")
 	{
 		console.log(message.author.username + ' benutzte HEY CORTANA, HILFE')
-		message.channel.sendMessage("**-=-** Cortana - by beta#0922 **-=-**\n\n**Need English Help?** ``hey cortana, help``\n\n**Neuerungen:**\nNeues Weihnachts-Profilbild und Weihnachtslogo\n\n**Commands:**\n**Prefix:** ``hey cortana, ``\n**Starter:**\n``hilfe`` - Zeigt dir die Hilfe-Liste.\n``discord`` - Zeigt dir die Serveranzahl etc. und gibt den Einladungs-Link\n``link`` - Gibt dir den Einladungs-Link\n\n**Suchen:**\n``trans SUCHBEGRIFF`` - Zeigt dir den Link zum Bing Übersetzer mit deinem Suchbegriff (->DE)\n``insta SUCHBEGRIFF`` - Zeigt dir den Link zu dem gesuchten Instagram-Profil\n``showme SUCHBEGRIFF`` - Gibt dir den Link zu Bing Bilder mit deinem gesuchten Suchbegriff\n``SUCHBEGRIFF`` - Sucht bei Bing nach deinem Suchbegriff\n\n**Cortana-Befehle:**\n``du bist dumm``\n``kennst du siri``\n``kennst du bill gates``\n``magst du bill gates``\n``du bist gefeuert``\n``hast du superkräfte``\n``was ist deine superkraft``\n``kennst du den master chief``\n``liebst du den master chief``\n``wie alt bist du``\n``erzähl mir einen witz``\n``erzähl mir eine geschichte``\n``sing mir ein lied``\nWeitere Befehle kommen bald.\n\n\nBis dann, beta.");
-	}
+    message.channel.sendMessage("", {embed : {
+      color: rnd_selection(3447003, 3201849, 13818670, 7009371, 14383916),
+      author: {
+        name: 'Hilfe',
+        icon_url: 'https://cdn.discordapp.com/emojis/256857247068454915.png'
+      },
+      title: 'Help (German)',
+      description: '',
+      fields: [
+        {
+          name: '[Neuerungen]',
+          value: '``Weihnachtsbild und Weihnachtsprofilbild, Embed Nachrichten, Ping-Befehl``'
+        },
+        {
+          name: '[Prefix]',
+          value: '``hey cortana, ``'
+        },
+        {
+          name: '[Discord]',
+          value: '``hilfe``\n``discord``\n``link``\n``server``'
+        },
+        {
+          name: '[Suchen]',
+          value: '``trans``\n``insta``'
+        },
+        {
+          name: '[Cortana-Befehle]',
+          value: '``du bist dumm``\n``kennst du siri``\n``kennst du bill gates``\n``magst du bill gates``\n``du bist gefeuert``\n``hast du superkräfte``\n``was ist deine superkraft``\n``kennst du den master chief``\n``liebst du den master chief``\n``wie alt bist du``\n``erzähl mir einen witz``\n``erzähl mir eine geschichte``\n``sing mir ein lied``'
+        },
+      ],
+      footer: {
+        icon_url: bot.user.avatarURL,
+        text: bot.user.username
+      }
+    }});	}
 };
 ///////////
 //SEARCH//
 //////////
+
 var input = message.content.toUpperCase()
 var bingPrefix =  'HEY CORTANA, ';
  if(input.startsWith(bingPrefix) ){
    var bing = input.substr(bingPrefix.length);
    var bingDown = bing.toLowerCase();
    var bingDownUrl = bingDown.split(' ').join('+');
-   var bingUrl = 'http://www.bing.com/search?q=' + bingDownUrl + ']';
+   var bingUrl = 'http://www.bing.com/search?q=' + bingDownUrl;
     console.log(message.author.username + ' benutzte HEY CORTANA, ')
-    message.channel.sendMessage("____________________________ \_\_\_____________________________ \_\_\____________________________ \_\_\_____________________________\_\_\_____________________________ \_\_\_____________________________ \_\_\_____________________________ \_\_\_____________________________ \_\_\_____________________________ \_\_\_____________________________ \_\_\_____________________________ \_\_\_____________________________ ")
-	message.channel.sendMessage('\n Weitere Ergebnisse auf Bing.com anzeigen. \n['  + bingUrl );
+    message.channel.sendMessage("", {embed : {
+      color: 14383916,
+      author: {
+        name: 'Bing',
+        icon_url: 'https://cdn.discordapp.com/emojis/256849289748283392.png'
+      },
+      title: '',
+      description: '',
+      fields: [
+        {
+          name: '[Bing.com Search]',
+          value: bingUrl
+        },
+      ],
+      footer: {
+        icon_url: bot.user.avatarURL,
+        text: 'Cortana'
+      }
+    }});
 };
 
 });
-bot.login("well NO");
+bot.login("nope");
